@@ -18,10 +18,6 @@ class Container extends React.Component {
         }
     }
 
-    componentDidMount() {
-        // 
-    }
-
     addTxt() {
         let store_result = this.props.result;
         store_result.push({ id: store_result.length === 0 ? 0 : store_result[store_result.length - 1].id + 1, text: this.state.text });
@@ -114,7 +110,7 @@ class Container extends React.Component {
                         <h2 style={{ textAlign: "center", marginBottom: "25px" }}>Edit Modal</h2>
                         <div style={{ display: "flex" }}>
                             <div className="col-md-10">
-                                <input type="text" className="form-control" id="name" onChange={(e) => this.setState({ selectedTxt: e.target.value })} value={this.state.selectedTxt} />
+                                <input type="text" className="form-control" id="edit" onChange={(e) => this.setState({ selectedTxt: e.target.value })} value={this.state.selectedTxt} />
                             </div>
                             <button className="col-md-2" onClick={() => this.updateTxt()}>OK</button>
                         </div>
