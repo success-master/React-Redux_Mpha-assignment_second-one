@@ -1,4 +1,4 @@
-export default (state, action) => {
+const rootReducer = (state, action) => {
     switch (action.type) {
         case "resultAction":
             return {
@@ -9,3 +9,5 @@ export default (state, action) => {
             return state;
     }
 };
+
+export default rootReducer
